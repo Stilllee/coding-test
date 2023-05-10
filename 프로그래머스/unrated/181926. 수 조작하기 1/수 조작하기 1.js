@@ -1,16 +1,10 @@
 function solution(n, control) {
-    let answer = n;
-    const arr = [...control]
-    arr.forEach((c)=>{
-        if (c === "w"){
-            answer += 1;
-        } else if ( c === "s"){
-            answer -= 1;
-        } else if (c === "d"){
-            answer += 10;
-        } else if (c === "a") {
-            answer -= 10;
-        }
-    })
-    return answer;
-}
+  const controlMap = {
+      w: +1,
+      s: -1,
+      d: +10,
+      a: -10
+  };
+    return [...control].reduce((acc, c) => acc + (controlMap[c] || 0), n);
+};
+
