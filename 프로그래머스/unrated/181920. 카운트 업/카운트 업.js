@@ -1,7 +1,3 @@
-function solution(start_num, end_num) {
-    let answer = [];
-    for(let i = start_num; i <= end_num; i++){
-        answer.push(i);
-    }
-    return answer;
+function solution(start, end) {
+    return Array.from({length: end - start + 1}, (_, i)=> i + start);
 }
