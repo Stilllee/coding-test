@@ -1,1 +1,1 @@
-const solution = n_str => +n_str; 
+const solution = Number;
