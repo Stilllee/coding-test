@@ -1,16 +1,11 @@
 function solution(num_list) {
-    let oddSum = 0;
-    let evenSum = 0;    
-    for(let i = 0; i < num_list.length; i++) {
-        if(i % 2 === 0) {
-        oddSum += num_list[i];
-        } else {        
-        evenSum += num_list[i];
+    const [oddSum, evenSum] = num_list.reduce(([odd, even], curr, index) => {
+        if(index % 2 === 0) {
+            even += curr;
+        } else {
+            odd += curr;
         }
-    }   
-    if(evenSum == oddSum) {
-        return evenSum;
-    } else {
-        return (evenSum > oddSum) ? evenSum : oddSum;
-    }
+        return [odd, even];
+    }, [0, 0]);
+    return Math.max(oddSum, evenSum);
 }
