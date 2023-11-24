@@ -1,0 +1,1 @@
+const solution = (my_string, n) => answer = my_string.slice(0, n);
