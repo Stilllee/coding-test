@@ -1,3 +1,1 @@
-function solution(n_str) {
-    return String(Number(n_str));
-}
+const solution = n_str => String(+n_str);
