@@ -1,3 +1,5 @@
-const fs = require('fs');
-const input = fs.readFileSync("./dev/stdin").toString().trim();
-console.log(input - 543);
+const input = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+const yearConverter = year => console.log(year - 543);
+
+yearConverter(input);
