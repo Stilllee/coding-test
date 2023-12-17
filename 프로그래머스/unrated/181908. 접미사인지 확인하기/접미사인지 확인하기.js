@@ -1,1 +1,1 @@
-const solution = (str1, str2) => +(str2 === str1.slice(str1.length - str2.length));
+const solution = (str, suff) => str.endsWith(suff) ? 1 : 0;
