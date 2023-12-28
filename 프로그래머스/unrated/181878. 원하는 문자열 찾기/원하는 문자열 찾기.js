@@ -1,0 +1,1 @@
+const solution = (str, pat) => str.toLowerCase().includes(pat.toLowerCase()) ? 1 : 0;
