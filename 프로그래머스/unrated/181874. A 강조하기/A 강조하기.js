@@ -1,3 +1,1 @@
-const solution = (str) => str.replace(/[A-Za-z]/g, c => 
-    c === 'a' ? 'A': 
-    c === 'A' ? 'A' : c.toLowerCase());
+const solution = (str) => str.toLowerCase().replaceAll('a', 'A');
