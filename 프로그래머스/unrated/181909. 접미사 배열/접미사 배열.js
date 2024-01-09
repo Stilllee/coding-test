@@ -1,0 +1,1 @@
+const solution = (str) => Array.from(str, (_, i) => str.slice(i)).sort();
