@@ -1,0 +1,1 @@
+const solution = n => (n[0] + +n.slice(-1)) / 2;
