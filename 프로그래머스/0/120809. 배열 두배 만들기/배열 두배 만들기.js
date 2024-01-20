@@ -1,0 +1,1 @@
+const solution = (numbers) => numbers.map(i => i * 2);
