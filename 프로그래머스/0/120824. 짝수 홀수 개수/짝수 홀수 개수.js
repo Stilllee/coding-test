@@ -3,7 +3,7 @@ const solution = num_list => {
     let odd = 0;
     let even = 0;
     for (let i = 0; i < num_list.length; i++) {
-        num_list[i] % 2 === 0 ? even += 1 : odd += 1;
+        num_list[i] % 2 === 0 ? even++ : odd++;
     }
     result.push(even);
     result.push(odd);
