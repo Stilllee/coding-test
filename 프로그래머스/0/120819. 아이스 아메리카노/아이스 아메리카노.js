@@ -1,6 +1,1 @@
-const solution = (money) => {
-    let arr = [];
-    arr.push(Math.floor(money / 5500));
-    arr.push(money % 5500);
-    return arr;
-}
+const solution = money => [Math.floor(money / 5500), money % 5500];
