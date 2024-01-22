@@ -9,27 +9,33 @@ function countDice(a, b, c, d) {
 function solution(a, b, c, d) {
   let counts = countDice(a, b, c, d);
   let keys = Object.keys(counts);
-  let values = Object.values(counts);
   
-  if (values.includes(4)) {
-    return 1111 * parseInt(keys[0]);
-  } else if (values.includes(3)) {
-    let p = parseInt(keys[values.indexOf(3)]);
-    let q = parseInt(keys[values.indexOf(1)]);
-    return Math.pow(10 * p + q, 2);
-  } else if (values.includes(2)) {
-    if (values.length === 2) {
-      let p = parseInt(keys[0]);
-      let q = parseInt(keys[1]);
-      return (p + q) * Math.abs(p - q);
-    } else {
-      let p = parseInt(keys[values.indexOf(2)]);
-      let otherKeys = keys.filter(key => key !== p.toString());
-      let q = parseInt(otherKeys[0]);
-      let r = parseInt(otherKeys[1]);
-      return q * r;
-    }
+  switch (keys.length) {
+    case 1:
+      // 모든 주사위가 같은 숫자
+      return 1111 * keys[0];
+    
+    case 2:
+      // 두 쌍의 주사위가 같은 숫자 또는 세 개가 같은 숫자
+      let [first, second] = keys.map(Number);
+      if (counts[first] === 2 && counts[second] === 2) {
+    // 두 쌍의 주사위가 각각 같은 숫자
+    return (first + second) * Math.abs(first - second);
   } else {
-    return Math.min(a, b, c, d);
+    // 세 개가 같은 숫자
+    let p = counts[first] === 3 ? first : second;
+    let q = counts[first] === 1 ? first : second;
+    return Math.pow(10 * p + q, 2);
+  }
+    
+    case 3:
+      // 한 쌍의 주사위가 같은 숫자
+      let doubleNum = keys.find(key => counts[key] === 2);
+      let product = keys.reduce((prod, key) => prod * (key !== doubleNum ? Number(key) : 1), 1);
+      return product;
+      
+    default:
+      // 모든 숫자가 다름
+      return Math.min(a, b, c, d);
   }
 }
