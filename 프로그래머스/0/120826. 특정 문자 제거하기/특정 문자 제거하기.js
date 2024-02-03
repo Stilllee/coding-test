@@ -1,1 +1,1 @@
-const solution = (my_string, letter) => my_string.split('').filter(i => i !== letter).join('');
+const solution = (my_string, letter) => my_string.split(letter).join('');
