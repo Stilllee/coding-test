@@ -1,15 +1,6 @@
 function solution(arr) {
-  let start = -1;
-  let end = -1;
-  
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 2) {
-      if (start === -1) start = i;
-      end = i;
-    }
-  }  
+    const start = arr.indexOf(2);
+    const end = arr.lastIndexOf(2);
     
-  if (start === -1) return [-1];
-  
-  return arr.slice(start, end + 1);
+    return start === -1 ? [-1] : arr.slice(start, end + 1);
 }
