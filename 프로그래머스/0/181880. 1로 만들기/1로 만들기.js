@@ -1,16 +1,8 @@
-function solution(list) {
-    let count = 0;
-
-    for (let num of list) {
-        while (num > 1) {
-            if (num % 2 === 0) {
-                num /= 2;
-            } else {
-                num = (num - 1) / 2;
-            }
-            count++;
-        }
-    }
-    
-    return count;
+function solution(num_list) {
+    return num_list
+        .map(num => {
+            const binary = num.toString(2);
+            return binary.length - 1;
+        })
+        .reduce((a, c) => a + c);
 }
