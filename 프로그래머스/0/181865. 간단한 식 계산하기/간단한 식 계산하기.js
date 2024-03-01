@@ -1,12 +1,6 @@
 function solution(binomial) {
-    const arr = binomial.split(' ');
-    
-    switch(arr[1]) {
-        case '+':
-            return parseInt(arr[0]) + parseInt(arr[2]);
-        case '-':
-            return parseInt(arr[0]) - parseInt(arr[2]);
-        case '*':
-            return parseInt(arr[0]) * parseInt(arr[2]);
-    }
+    const arr = binomial.split(' ');    
+    if (arr[1] === '+') return parseInt(arr[0]) + parseInt(arr[2]);
+    if (arr[1] === '-') return parseInt(arr[0]) - parseInt(arr[2]);
+    if (arr[1] === '*') return parseInt(arr[0]) * parseInt(arr[2]);
 }
