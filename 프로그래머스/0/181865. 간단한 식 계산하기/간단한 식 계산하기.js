@@ -1,6 +1,10 @@
+const ops = {
+    '+': (a, b) => a + b,
+    '-': (a, b) => a - b,
+    '*': (a, b) => a * b,
+}
+
 function solution(binomial) {
-    const arr = binomial.split(' ');    
-    if (arr[1] === '+') return parseInt(arr[0]) + parseInt(arr[2]);
-    if (arr[1] === '-') return parseInt(arr[0]) - parseInt(arr[2]);
-    if (arr[1] === '*') return parseInt(arr[0]) * parseInt(arr[2]);
+    const [a, op, b] = binomial.split(' ');
+    return ops[op](+a, +b);
 }
