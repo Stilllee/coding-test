@@ -1,6 +1,1 @@
-function solution(a, b) {
-    const intA = BigInt(a);
-    const intB = BigInt(b);
-    const sum = intA + intB;
-    return sum.toString();
-}
+const solution = (a, b) => String(BigInt(a) + BigInt(b));
