@@ -1,7 +1,3 @@
-function isUpperCase(str) {
-  return str === str.toUpperCase();
-}
-
-function solution(my_string) {
-    return [...my_string].map((v) => isUpperCase(v) ? v.toLowerCase() : v.toUpperCase()).join('');
+function solution(str) {
+    return [...str].map(v => v.toUpperCase() === v ? v.toLowerCase() : v.toUpperCase()).join('');
 }
