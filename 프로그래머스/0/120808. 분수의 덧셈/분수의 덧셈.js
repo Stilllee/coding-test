@@ -1,10 +1,6 @@
 function gcd(a, b) {
-    while (b != 0) {
-        let r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+    if (b == 0) return a;
+    return gcd(b, a % b);
 }
 
 function solution(n1, d1, n2, d2) {
