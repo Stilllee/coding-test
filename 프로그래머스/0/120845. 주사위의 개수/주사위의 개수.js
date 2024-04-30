@@ -1,7 +1,4 @@
 function solution(box, n) {
-    let answer = 1;
-    for (let i = 0; i < box.length; i++) {
-        answer *= Math.floor(box[i] / n);
-    }
-    return answer;
+    const [width, depth, height] = box;
+    return Math.floor(width / n) * Math.floor(depth / n) * Math.floor(height / n);
 }
