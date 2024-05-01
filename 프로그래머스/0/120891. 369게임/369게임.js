@@ -1,3 +1,6 @@
 function solution(order) {
-    return [...order.toString().matchAll(/[3|6|9]/g)].length;
+    const clap = new Set([3, 6, 9]);
+    return String(order).split('')
+                        .filter(n => clap.has(Number(n)))
+                        .length;
 }
