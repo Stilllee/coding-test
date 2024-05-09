@@ -1,3 +1,4 @@
 function solution(num) {
-    return (num % 2 === 0) ? "Even" : "Odd";
+    // 0은 false
+    return num % 2 ? "Odd" : "Even"; 
 }
