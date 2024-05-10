@@ -1,4 +1,4 @@
 function solution(n) {
-    const arr = (n + "").split('');
-    return arr.reduce((acc, cur) => acc + +cur, 0);
+    const arr = n.toString().split('');
+    return arr.reduce((acc, cur) => acc + parseInt(cur), 0);
 }
