@@ -1,4 +1,4 @@
 function solution(n) {
-    const arr = n.toString().split('');
+    const arr = (n + "").split('');
     return arr.reduce((acc, cur) => acc + +cur, 0);
 }
