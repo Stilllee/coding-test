@@ -1,12 +1,10 @@
-function solution(a, b) {
-    let answer = 0;
+function solution(a, b, answer = 0) {
     const min = Math.min(a, b);
     const max = Math.max(a, b);
     
-    let i = min;
-    while (i <= max) {
+    for (let i = min; i <= max; i++) {
         answer += i;
-        i++;
     }
+    
     return answer;
 }
