@@ -7,13 +7,5 @@ const morse = {
 };
 
 function solution(letter) {
-    var answer = '';
-    
-    const arr = letter.split(' ');
-    
-    for (let code of arr) {
-        answer += morse[code];
-    }
-    
-    return answer;
+    return letter.split(' ').reduce((prev, curr) => prev + morse[curr], '');
 }
