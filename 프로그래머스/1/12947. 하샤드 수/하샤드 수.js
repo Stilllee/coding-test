@@ -1,7 +1,10 @@
 function solution(x) {
-    let str = x.toString();
-    let arr = str.split('').map(Number);
-    let sum = arr.reduce((acc, cur) => acc += cur);
+    let sum = 0;
+    let arr = String(x).split('');
+    
+    for (let i = 0; i < arr.length; i++) {
+        sum += Number(arr[i]);
+    }
     
     return x % sum === 0;
 }
