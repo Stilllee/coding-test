@@ -1,9 +1,7 @@
 function solution(num) {
     let count = 0;
     
-    while (num !== 1) {
-        if (count >= 500) return -1;
-        
+    while (num !== 1 && count < 500) {        
         if (num % 2 === 0) {
             num = num / 2;
         } else {
@@ -13,5 +11,5 @@ function solution(num) {
         count++;
     }
     
-    return count;
+    return num === 1 ? count : -1;
 }
