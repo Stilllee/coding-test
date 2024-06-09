@@ -1,9 +1,10 @@
 function solution(s) {
-    if (s.length !== 4 && s.length !== 6) return false;
-    
-    for (let i = 0; i < s.length; i++) {
-        if (!('0' <= s[i] && s[i] <= '9')) return false;
-    }
-    
-    return true;
+    // 1. 길이 확인
+    const isValidLength = s.length === 4 || s.length === 6;
+
+    // 2. 숫자로만 구성되어 있는지 확인
+    const isNumeric = /^\d+$/.test(s);
+
+    // 3. 결과 반환
+    return isValidLength && isNumeric;
 }
