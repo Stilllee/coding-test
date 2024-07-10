@@ -4,15 +4,11 @@ const members = [];
 
 for (let i = 1; i <= n; i++) {
     const [age, name] = input[i].split(' ');
-    let member = {
-        age,
-        name
-    }
-    members.push(member);
+    members.push({ age: parseInt(age), name });
 }
 
-const sortedAge = members.sort((a, b) => a.age - b.age);
+members.sort((a, b) => a.age - b.age);
 
-for (const {age, name} of sortedAge) {
-    console.log(age, name);
+for (const member of members) {
+    console.log(member.age, member.name);
 }
