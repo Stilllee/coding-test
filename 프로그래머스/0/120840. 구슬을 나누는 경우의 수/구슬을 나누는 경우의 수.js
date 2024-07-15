@@ -11,6 +11,8 @@ function factorial(n) {
 }
 
 function solution(balls, share) {
+    // 조합을 구하는 공식: n! / ((n-m)! * m!)
     const result =  factorial(balls) / (factorial(balls - share) * factorial(share));
+    // Math.round() 함수를 사용하여 JavaScript의 소수점 문제를 해결하고, 결과를 반올림하여 정수로 반환
     return Math.round(result);
 }
