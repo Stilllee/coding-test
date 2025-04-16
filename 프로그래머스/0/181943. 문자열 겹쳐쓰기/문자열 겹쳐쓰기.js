@@ -1,10 +1,5 @@
 function solution(my_string, overwrite_string, s) {
-    let answer = '';
-    const myStrLeng = my_string.length;
-    const overwriteStrLeng = overwrite_string.length;
-    const restStrLeng = myStrLeng - overwriteStrLeng - s;
-    answer += my_string.slice(0, s);
-    answer += overwrite_string;
-    if (restStrLeng === 0) return answer;
-    return answer += my_string.slice(-restStrLeng);
+    const prefix = my_string.slice(0, s);
+    const suffix = my_string.slice(s + overwrite_string.length);
+    return prefix + overwrite_string + suffix;
 }
