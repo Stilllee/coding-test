@@ -1,6 +1,6 @@
-const checkEven = (num) => num % 2 === 0;
+const isEven = (num) => num % 2 === 0;
 
-const sumOdd = (num) => {
+const sumOfOdds = (num) => {
     let total = 0;
     for (let i = 1; i <= num; i+=2) {
         total += i;
@@ -8,14 +8,14 @@ const sumOdd = (num) => {
     return total;
 }
 
-const multEven = (num) => {
+const sumOfSquareEvens = (num) => {
     let total = 0;
     for (let i = 2; i <= num; i+=2) {
-        total += Math.pow(i, 2);
+        total += i ** 2;
     }
     return total;
 }
 
 function solution(n) {
-    return checkEven(n) ? multEven(n) : sumOdd(n);
+    return isEven(n) ? sumOfSquareEvens(n) : sumOfOdds(n);
 }
