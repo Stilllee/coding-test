@@ -1,8 +1,6 @@
 function solution(a, b) {
-    const aToB = Number(`${a}${b}`);
-    const bToA = Number(`${b}${a}`);
+    const combinedAB = Number(`${a}${b}`);
+    const combinedBA = Number(`${b}${a}`);
     
-    if (aToB === bToA) return aToB;
-    
-    return Math.max(aToB, bToA);
+    return combinedAB >= combinedBA ? combinedAB : combinedBA;
 }
