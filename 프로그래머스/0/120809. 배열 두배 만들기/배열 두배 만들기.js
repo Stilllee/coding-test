@@ -1,1 +1,3 @@
-const solution = (numbers) => numbers.map(i => i * 2);
+function solution(numbers) {
+    return numbers.map((num) => num * 2);
+}
