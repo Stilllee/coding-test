@@ -1,9 +1,13 @@
-const gcd = (a, b) => b == 0 ? a : gcd(b, a % b);
+// 최대공약수를 구하는 함수
+const getGCD = (a, b) => {
+    return b === 0 ? a : getGCD(b, a % b);
+}
 
-function solution(n1, d1, n2, d2) {
-    const n = (d1 * n2) + (d2 * n1);
-    const d = d1 * d2;
-    const g = gcd(n, d);
+function solution(numer1, denom1, numer2, denom2) {
+    const denominator = denom1 * denom2;
+    const numerator = numer1 * denom2 + numer2 * denom1;
     
-    return [n/g, d/g];
+    const gcd = getGCD(numerator, denominator);
+    
+    return [numerator / gcd, denominator / gcd];
 }
