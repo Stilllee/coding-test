@@ -1,5 +1,8 @@
 function solution(a, b) {
-    const aToB = Number(String(a) + b);
-    const bToA = Number(String(b) + a);
-    return aToB > bToA ? aToB : bToA;
+    const aToB = Number(`${a}${b}`);
+    const bToA = Number(`${b}${a}`);
+    
+    if (aToB === bToA) return aToB;
+    
+    return Math.max(aToB, bToA);
 }
