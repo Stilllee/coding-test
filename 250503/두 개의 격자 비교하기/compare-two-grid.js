@@ -6,12 +6,12 @@ let arr1 = Array(n).fill(0).map(() => Array(m).fill(0));
 let arr2 = Array(n).fill(0).map(() => Array(m).fill(0));
 let result = Array(n).fill(0).map(() => Array(m).fill(0));
 
-for (let i = 1; i < 9; i++) {
-    if (i <= n) {
-        arr1[i - 1] = input[i].split(' ').map(Number);
-    } else if (i > n) {
-        arr2[i - n - 1] = input[i].split(' ').map(Number);
-    }
+for (let i = 0; i < n; i++) {
+    arr1[i] = input[i + 1].split(' ').map(Number);
+}
+
+for (let i = 0; i < n; i++) {
+    arr2[i] = input[i + n + 1].split(' ').map(Number);
 }
 
 for (let i = 0; i < n; i++) {
