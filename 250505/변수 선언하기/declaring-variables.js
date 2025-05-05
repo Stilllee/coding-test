@@ -1,2 +1,2 @@
-const a = 3, b = c;
-console.log(a + '\n' + c);
+const a = 3, b = 'c';
+console.log(a + '\n' + b);
