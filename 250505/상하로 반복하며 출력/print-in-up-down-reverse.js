@@ -1,3 +1,14 @@
 const fs = require('fs');
 const n = Number(fs.readFileSync(0).toString().trim());
-const result = Array.from(n).fill(0).map(() => Array.from(n).fill(0));
+
+for (let i = 0; i < n; i++) {
+    let row = '';
+    for (let j = 0; j < n; j++) {
+        if (j % 2 === 0) {
+            row += (i + 1);
+        } else {
+            row += (n - i);
+        }
+    }
+    console.log(row);
+}
