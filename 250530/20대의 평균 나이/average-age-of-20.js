@@ -9,7 +9,7 @@ while (true) {
     const n = input[idx];
     idx++;
 
-    if (n >= 30) {
+    if (!(n >= 20 && n <= 29)) {
         break;
     }
 
