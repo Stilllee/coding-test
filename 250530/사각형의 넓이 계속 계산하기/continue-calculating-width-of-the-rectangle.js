@@ -8,13 +8,9 @@ while (true) {
     const [w, h, str] = input[idx].split(' ');
     idx++;
 
-    let result = w * h;
-    console.log(result);
+    console.log(w * h);
     
     if (str === 'C') {
         break;
-    }
-    else {
-        continue;
     }
 }
