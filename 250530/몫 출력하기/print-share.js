@@ -13,8 +13,8 @@ while (true) {
 
     if (n % 2 === 0) {
         console.log(Math.floor(n / 2));
+        cnt++;
     }
 
     idx++;
-    cnt++;
 }
