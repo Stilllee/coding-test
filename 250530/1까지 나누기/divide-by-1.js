@@ -1,11 +1,10 @@
 const fs = require('fs');
-const n = Number(fs.readFileSync(0).toString().trim());
+let n = Number(fs.readFileSync(0).toString().trim());
 
-let result = n;
+for (let i = 1; i; i++) {
+    n = Math.floor(n / i);
 
-for (let i = 1; i <= n; i++) {
-    result /= i;
-    if (result <= 1) {
+    if (n <= 1) {
         console.log(i);
         break;
     }
