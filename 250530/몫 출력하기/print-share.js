@@ -6,15 +6,18 @@ let cnt = 0;
 
 while (true) {
     let n = input[idx];
+    idx++;
 
-    if (cnt > 3) {
+    let result = n;
+    if (n % 2 === 0) {
+        result = parseInt(n / 2);
+        cnt++;
+    } else {
+        continue;
+    }
+    console.log(result);
+
+    if (cnt >= 3) {
         break;
     }
-
-    if (n % 2 === 0) {
-        console.log(Math.floor(n / 2));
-        cnt++;
-    }
-
-    idx++;
 }
