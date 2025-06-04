@@ -8,3 +8,11 @@ for (let i = 1; i <= n; i++) {
     }
     console.log(str.trim());
 }
+
+for (let i = n - 1; i >= 1; i--) {
+    let str = '';
+    for (let j = 1; j <= i; j++) {
+        str += '* '
+    }
+    console.log(str.trim());
+}
