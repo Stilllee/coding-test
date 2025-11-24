@@ -1,3 +1,3 @@
-a = "C";
-a = "T";
-print(a);
+a = "C"
+a = "T"
+print(a)
