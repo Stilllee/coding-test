@@ -1,4 +1,4 @@
-const n = int(input())
+n = int(input())
 
 if n < 0:
     print('ice')
