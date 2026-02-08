@@ -1,4 +1,4 @@
-a = int(input())
+a = float(input())
 
 if a >= 1.0:
     print('High')
