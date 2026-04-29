@@ -1,0 +1,5 @@
+SELECT user_id, product_id
+FROM ONLINE_SALE
+GROUP BY user_id, product_id
+HAVING COUNT(*) >= 2
+ORDER BY USER_ID ASC, PRODUCT_ID DESC;
